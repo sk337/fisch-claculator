@@ -23,10 +23,10 @@ function Index() {
     <div className="p-2 flex flex-col gap-4">
       <span className='text-2xl font-bold'>Fisch Odds Calculator</span>
       <p>
-        A Work In Progress odds calculator for the game Fisch. <br />
+        A Work In Progress odds calculator for the game <a href="https://www.roblox.com/games/16732694052/Fisch" target="_blank" className="underline">Fisch</a>. <br />
         My plan for this is to allow it to calculate profit over time for different fish, rod, location, and bait combinations. I also plan show the odds of catching any specified fish for bestiary. <br />
         I have only gotten some data and for now you can play with some components I have made for the project. <br/>
-        Oh yeah and this is all 100% <i>TypeSafe&trade;</i>. You can contact me on discord at <i className='underline'>sk337</i>.
+        Oh yeah and this is all 100% <i>TypeSafe&trade;</i>. You can contact me on discord at <i>sk337</i>.
       </p>
       <SelectRod onChange={setSelectedRod} value={selectedRod} />
       <SelectMutation onChange={setSelectedMutation} value={selectedMutation} />
