@@ -1,0 +1,1 @@
+export type seasonType = "spring" | "summer" | "autumn" | "winter";
