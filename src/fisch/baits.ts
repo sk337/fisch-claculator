@@ -12,7 +12,7 @@ const baitData = [
 ] as const;
 
 // Automatically generate the union type of the `identifier` values
-export type baitType = typeof baitData[number]['identifier'];
+export type BaitType = typeof baitData[number]['identifier'];
 
 /**
  * Interface for bait data
@@ -21,7 +21,7 @@ interface Bait {
     /** Name of the Bait */
     name: string;
     /** Identifier for the bait */
-    identifier: baitType;
+    identifier: BaitType;
     /** Baits effect on resilience */
     resilience: number;
     /** Bait effect on lure speed */

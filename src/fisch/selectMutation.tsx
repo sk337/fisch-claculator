@@ -27,7 +27,7 @@ export const SelectMutation = React.forwardRef<HTMLDivElement, SelectMutationPro
             <SelectContent>
                 {mutations.map((mutation) => (
                     <SelectItem value={mutation.identifier} key={mutation.identifier}>
-                        {mutation.name}
+                        {mutation.name} ({mutation.value}x)
                     </SelectItem>
                 ))}
             </SelectContent>

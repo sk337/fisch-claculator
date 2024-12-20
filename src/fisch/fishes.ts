@@ -1,4 +1,4 @@
-import { baitType } from "$/baits";
+import { BaitType } from "$/baits";
 
 const fishData = [] as const;
 
@@ -14,6 +14,6 @@ interface Fish {
     /** Identifier of the fish */
     identifier: fishType;
     /** Bait that the fish uses */
-    preferredBait: baitType;
+    preferredBait: BaitType;
 }
 
