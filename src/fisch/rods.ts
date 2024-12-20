@@ -1,5 +1,3 @@
-import { maxHeaderSize } from "http";
-
 const rodData = [
     {
         name: "Flimsy Rod",
