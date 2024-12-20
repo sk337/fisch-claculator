@@ -1,3 +1,5 @@
+import { maxHeaderSize } from "http";
+
 const rodData = [
     {
         name: "Flimsy Rod",
@@ -267,6 +269,135 @@ const rodData = [
         control: 0.15,
         resilience: 15,
         maxKg: 5_000,
+        unobtainable: false
+    },
+    {
+        name: "Antler Rod",
+        identifier: "antler",
+        lure: 25,
+        luck: 45,
+        control:0.02,
+        resilience: -4,
+        maxKg: 200,
+        unobtainable: false
+    },
+    {
+        name: "North-Star Rod",
+        identifier: "northstar",
+        lure: 5,
+        luck: 30,
+        control: 0.04,
+        resilience: 12,
+        maxKg: 875,
+        unobtainable: false
+    },
+    {
+        name: "Rod of The Forgotten Fang",
+        identifier: "forgottenfang",
+        lure:78,
+        luck:145,
+        control: 0.22,
+        resilience: 25,
+        maxKg: Infinity,
+        unobtainable: false
+    },
+    {
+        name: "Rod of The Eternal King",
+        identifier: "eternalking",
+        lure: 50,
+        luck: 160,
+        control: 0.175,
+        resilience: 15,
+        maxKg: 75_000,
+        unobtainable: false
+    },
+    {
+        name: "Celestial Rod",
+        identifier: "celestial",
+        lure: 35,
+        luck: 60,
+        control: 0.07,
+        resilience: 5,
+        maxKg: Infinity,
+        unobtainable: false
+    },
+    {
+        name: "The Lost Rod",
+        identifier: "lost",
+        lure:15,
+        luck:25,
+        control: 0.08,
+        resilience: 8,
+        maxKg: 55_000,
+        unobtainable: false
+    },
+    {
+        name: "Voyager Rod",
+        identifier: "voyager",
+        lure: 25,
+        luck: 85,
+        control: 0,
+        resilience: 10,
+        maxKg: Infinity,
+    },
+    {
+        name: "Riptide Rod",
+        identifier: "riptide",
+        lure: 20,
+        luck: 25,
+        control: 0.05,
+        resilience: 5,
+        maxKg: 3_500,
+        unobtainable: false
+    },
+    {
+        name: "Krampus's Rod",
+        identifier: "krampus",
+        lure: 30,
+        luck: 15,
+        control: 0.15,
+        resilience: 8,
+        maxKg: Infinity,
+        unobtainable: false
+    },
+    {
+        name: "Seasons Rod",
+        identifier: "seasons",
+        lure: 20,
+        luck: 35,
+        control: 0.03,
+        resilience: 10,
+        maxKg: 4_000,
+        unobtainable: false
+    },
+    {
+        name: "Resourceful Rod",
+        identifier: "resourceful",
+        lure: 15,
+        luck: 20,
+        control: -0.01, // WTF first time seeing this
+        resilience: 0,
+        maxKg: 1_000,
+        unobtainable: false
+    },
+    {
+        name: "Wisdom Rod",
+        identifier: "wisdom",
+        lure: 10,
+        luck: 35,
+        control: 0.05,
+        resilience: 0,
+        maxKg: 2_000,
+        unobtainable: false
+    },
+    {
+        name: "Precision Rod",
+        identifier: "precision",
+        lure: 20,
+        luck: 150,
+        control: 0,
+        resilience: 5,
+        maxKg: 12_000,
         unobtainable: false
     }
 ] as const;
