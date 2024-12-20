@@ -1,2 +1,3 @@
 # fisch-claculator
-A Fisch odds claculator
+
+> A website for claculating 
