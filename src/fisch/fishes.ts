@@ -36,3 +36,6 @@ interface Fish {
     price: number;
 }
 
+export const fishes: Fish[] = fishData.map(fish => ({
+    ...fish,
+}));
