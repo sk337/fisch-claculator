@@ -1,3 +1,3 @@
-# fisch-claculator
+# fisch-calculator
 
-> A website for claculating 
+> A website for calculating Fisch odds
