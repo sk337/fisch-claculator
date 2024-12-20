@@ -160,6 +160,9 @@ const mutationData = [
 // Automatically generate the union type of the `identifier` values
 export type MutationType = typeof mutationData[number]['identifier'];
 
+/**
+ * Interface for fish mutations
+ */
 interface Mutation {
     /** Name of the fish mutation */
     name: string;
