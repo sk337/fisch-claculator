@@ -7,13 +7,9 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { seasons, SeasonType } from "$/season";
+import { SelectProps } from './selectProps';
 
-interface SelectSeasonProps {
-    value?: SeasonType;
-    onChange: (value: SeasonType) => void;
-}
-
-export const SelectSeason = React.forwardRef<HTMLDivElement, SelectSeasonProps>(({
+export const SelectSeason = React.forwardRef<HTMLDivElement, SelectProps<SeasonType>>(({
     value, 
     onChange, 
     ...props

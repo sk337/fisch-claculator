@@ -7,13 +7,13 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { mutations, MutationType } from "$/mutations";
+import { SelectProps } from '$/selectProps';
 
-interface SelectMutationProps {
-    value?: MutationType;
-    onChange: (value: MutationType) => void;
-}
 
-export const SelectMutation = React.forwardRef<HTMLDivElement, SelectMutationProps>(({
+/**
+ * A select component for selecting a mutation.
+ */
+export const SelectMutation = React.forwardRef<HTMLDivElement, SelectProps<MutationType>>(({
     value, 
     onChange, 
     ...props

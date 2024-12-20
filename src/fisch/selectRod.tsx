@@ -7,13 +7,9 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { rods, RodType } from "$/rods";
+import { SelectProps } from './selectProps';
 
-interface SelectRodProps {
-    value?: RodType;
-    onChange: (value: RodType) => void;
-}
-
-export const SelectRod = React.forwardRef<HTMLDivElement, SelectRodProps>(({
+export const SelectRod = React.forwardRef<HTMLDivElement, SelectProps<RodType>>(({
     value, 
     onChange, 
     ...props

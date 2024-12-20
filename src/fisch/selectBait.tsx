@@ -7,13 +7,10 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { baits, BaitType } from "$/baits";
+import { SelectProps } from './selectProps';
 
-interface SelectBaitProps {
-    value?: BaitType;
-    onChange: (value: BaitType) => void;
-}
 
-export const SelectBait = React.forwardRef<HTMLDivElement, SelectBaitProps>(({
+export const SelectBait = React.forwardRef<HTMLDivElement, SelectProps<BaitType>>(({
     value, 
     onChange, 
     ...props
