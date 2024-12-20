@@ -337,6 +337,7 @@ const rodData = [
         control: 0,
         resilience: 10,
         maxKg: Infinity,
+        unobtainable: false
     },
     {
         name: "Riptide Rod",
