@@ -163,7 +163,7 @@ export type MutationType = typeof mutationData[number]['identifier'];
 /**
  * Interface for fish mutations
  */
-interface Mutation {
+export interface Mutation {
     /** Name of the fish mutation */
     name: string;
     /** Mutation identifier (auto-generated union type) */
@@ -175,3 +175,8 @@ interface Mutation {
 export const mutations: Mutation[] = mutationData.map(mutation => ({
     ...mutation,
 }));
+
+
+export function getMutationByIdentifier(identifier: MutationType | undefined): Mutation | undefined {
+    return mutations.find(mutation => mutation.identifier === identifier);
+}

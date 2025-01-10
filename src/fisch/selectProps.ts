@@ -3,6 +3,10 @@
  */
 export interface SelectProps<T> {
     /**
+     * include a select item for no value
+     */
+    optional?: boolean;
+    /**
      * Current value of the select.
      */
     value?: T;

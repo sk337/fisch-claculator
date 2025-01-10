@@ -1,5 +1,5 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 export const Route = createRootRoute({
   component: () => (
@@ -8,11 +8,18 @@ export const Route = createRootRoute({
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>
+        <Link to="/value" className="[&.active]:font-bold">
+          Value Calculator
+        </Link>
+        <Link to="/odds" className="[&.active]:font-bold">
+          Odds Calculator
+        </Link>
       </div>
-      <hr />
       <Outlet />
       <TanStackRouterDevtools />
     </>
   ),
-  notFoundComponent: () => <div className='text-center font-bold text-2xl'>404 Not Found</div>,
-})
+  notFoundComponent: () => (
+    <div className="text-center font-bold text-2xl">404 Not Found</div>
+  ),
+});
