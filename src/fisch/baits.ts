@@ -39,6 +39,16 @@ const baitData = [
       univerrsal: 0,
     },
   },
+  {
+    name: "Seaweed",
+    identifier: "seaweed",
+    resilience: 10,
+    lure: 20,
+    luck: {
+      preferred: 35,
+      universal: 0,
+    },
+  }
 ] as const;
 
 // Automatically generate the union type of the `identifier` values

@@ -1,6 +1,6 @@
 import { BaitType } from "$/baits";
 import { rarity, RarityType } from "$/rarity";
-import { clear } from "console";
+import { clear, time } from "console";
 import { seasons, SeasonType } from "./season";
 import { WeatherType } from "./weather";
 
@@ -107,6 +107,25 @@ const fishData = [
     min: 0.1,
     max: 1.3,
     price: 75
+  },
+  {
+    name: "Gudgeon",
+    identifier: "gudgeon",
+    rarity: "common",
+    time: "day",
+    price: 133.333,
+    min: 0.1,
+    max: 0.6,
+    bait: "insect",
+  },
+  {
+    name: "Reef Minnow",
+    identifier: "reefMinnow",
+    rarity: "common",
+    price: 141.667,
+    min: 0.1,
+    max:1.3,
+    bait: "seaweed",
   }
 ] as const;
 

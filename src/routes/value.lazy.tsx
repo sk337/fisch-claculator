@@ -15,25 +15,19 @@ import { fishType, getFishByIdentifier } from "$/fishes";
 import { SelectFish } from "$/selectFishes";
 import RangeInputSelect from "@/components/rangeInput";
 import { getFischValue, getFishString } from "$/utils";
+import { useHash } from "@/hooks/useHash";
 
 export const Route = createLazyFileRoute("/value")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  // state for the custom fish value
-  const [customFishValue, setCustomFishValue] = useState<number>(0);
-  const [customWeight, setCustomWeight] = useState<number>(0);
-  const [customMutation, setCustomMutation] = useState<
-    MutationType | undefined
-  >();
-
   // state for the automatic fish value
-  const [fish, setFish] = useState<fishType | undefined>();
-  const [fishWeight, setFishWeight] = useState<number>(0);
-  const [fishMutation, setFishMutation] = useState<MutationType | undefined>();
-  const [shiny, setShiny] = useState<boolean>(false);
-  const [sparkling, setSparkling] = useState<boolean>(false);
+  const [fish, setFish] = useHash<fishType | undefined>("fish", undefined);
+  const [fishWeight, setFishWeight] = useHash<number>("fishWeight", 0);
+  const [fishMutation, setFishMutation] = useHash<MutationType | undefined>("fishMutation", undefined);
+  const [shiny, setShiny] = useHash<boolean>("isShiny",false);
+  const [sparkling, setSparkling] = useHash<boolean>("isSparkling",false);
 
   const fishValue = getFishByIdentifier(fish);
   if (fishValue && fishWeight < fishValue.min) {
@@ -48,52 +42,6 @@ function RouteComponent() {
     <div className="p-2 flex flex-col gap-4 w-full items-center">
       <p className="text-2xl font-bold">Value Calculator</p>
       <div className="flex flex-row">
-        <Card>
-          <CardHeader>
-            <CardTitle>Custom</CardTitle>
-            <CardDescription>
-              allows you to provide custom values{" "}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-2">
-            <div className="flex flex-row gap-2 items-center">
-              <Label htmlFor="c:pk">C$ Per KG</Label>
-              <Input
-                id="c:pk"
-                type="number"
-                value={customFishValue}
-                placeholder="Enter value"
-                onChange={(v) => {
-                  setCustomFishValue(parseInt(v.target.value));
-                }}
-              />
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              <Label>Weight</Label>
-              <Input
-                id="c:w"
-                type="number"
-                value={customWeight}
-                placeholder="Enter Weight"
-                onChange={(v) => {
-                  setCustomWeight(parseInt(v.target.value));
-                }}
-              />
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              <Label>Mutation</Label>
-              <SelectMutation onChange={setCustomMutation} />
-            </div>
-            <p>
-              Fish Value:{" "}
-              {customMutation != undefined
-                ? customFishValue *
-                  customWeight *
-                  (getMutationByIdentifier(customMutation) as Mutation).value
-                : 0}
-            </p>
-          </CardContent>
-        </Card>
         <Card>
           <CardHeader>
             <CardTitle>Automatically</CardTitle>
