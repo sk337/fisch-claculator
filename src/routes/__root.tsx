@@ -1,19 +1,32 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="p-2 flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>
-        <Link to="/value" className="[&.active]:font-bold">
-          Value Calculator
-        </Link>
-        <Link to="/odds" className="[&.active]:font-bold">
-          Odds Calculator
-        </Link>
+      <div className="flex justify-between items-center max-w-vw">
+        <div className="flex flex-row gap-2">
+          <Link
+            to="/"
+            className="[&.active]:font-bold border-r-2 border-border p-2"
+          >
+            Home
+          </Link>
+          <Link
+            to="/value"
+            className="[&.active]:font-bold border-r-2 border-border p-2"
+          >
+            Value Calculator
+          </Link>
+          <Link to="/odds" className="[&.active]:font-bold p-2">
+            Odds Calculator
+          </Link>
+        </div>
+
+        <div>
+          <ModeToggle />
+        </div>
       </div>
       <Outlet />
       <TanStackRouterDevtools />
