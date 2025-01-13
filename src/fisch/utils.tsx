@@ -33,7 +33,7 @@ export function getFishString(
   shiny?: boolean,
   sparkling?: boolean
 ): string {
-  let output = [];
+  const output = [];
 
   if (shiny) {
     output.push("Shiny");

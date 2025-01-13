@@ -1,7 +1,6 @@
 import { BaitType } from "$/baits";
-import { rarity, RarityType } from "$/rarity";
-import { clear, time } from "console";
-import { seasons, SeasonType } from "./season";
+import { RarityType } from "$/rarity";
+import { SeasonType } from "./season";
 import { WeatherType } from "./weather";
 
 const fishData = [

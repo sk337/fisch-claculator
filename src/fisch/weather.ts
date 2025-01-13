@@ -35,3 +35,7 @@ export interface Weather {
   name: string;
   identifier: WeatherType;
 }
+
+export const weather: Weather[] = weatherData.map(weather => ({
+  ...weather,
+}));

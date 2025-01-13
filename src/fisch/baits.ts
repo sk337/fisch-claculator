@@ -36,7 +36,7 @@ const baitData = [
     lure: 0,
     luck: {
       preferred: 25,
-      univerrsal: 0,
+      universal: 0,
     },
   },
   {

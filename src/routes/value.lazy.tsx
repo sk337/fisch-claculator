@@ -9,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SelectMutation } from "$/selectMutation";
-import { getMutationByIdentifier, Mutation, MutationType } from "$/mutations";
+import { getMutationByIdentifier, MutationType } from "$/mutations";
 import { fishType, getFishByIdentifier } from "$/fishes";
 import { SelectFish } from "$/selectFishes";
 import RangeInputSelect from "@/components/rangeInput";
@@ -142,9 +142,11 @@ function RouteComponent() {
                     type="number"
                     value={customValue}
                     onChange={(e) => {
-                      parseFloat(e.target.value) &&
+                      if(parseFloat(e.target.value)){
                         setCustomValue(parseFloat(e.target.value));
-                    }}
+                      }
+                    }
+                  }
                   />
                 </div>
                 <div className="flex items-center flex-row">
@@ -153,8 +155,9 @@ function RouteComponent() {
                     type="number"
                     value={customWeight}
                     onChange={(e) => {
-                      parseFloat(e.target.value) &&
+                      if(parseFloat(e.target.value)){
                         setCustomWeight(parseFloat(e.target.value));
+                      }
                     }}
                   />
                 </div>
@@ -164,8 +167,9 @@ function RouteComponent() {
                     type="number"
                     value={customMutation}
                     onChange={(e) => {
-                      parseFloat(e.target.value) &&
+                      if (parseFloat(e.target.value)) {
                         setCustomMutation(parseFloat(e.target.value));
+                      }
                     }}
                   />
                 </div>

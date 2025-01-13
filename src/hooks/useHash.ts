@@ -3,11 +3,14 @@
 import { useState, useEffect, useCallback } from "react";
 import superjson from "superjson";
 
+const encode: (str: string) => string = encodeURIComponent;
+const decode: (str: string) => string = decodeURIComponent;
+
 function parseHash(): Record<string, unknown> {
   if (typeof window === "undefined") return {};
   try {
     const hashContent = window.location.hash.slice(1);
-    const decodedHash = atob(hashContent);
+    const decodedHash = decode(hashContent);
     return superjson.parse(decodedHash) || {};
   } catch {
     return {};
@@ -16,7 +19,7 @@ function parseHash(): Record<string, unknown> {
 
 function stringifyHash(obj: Record<string, unknown>): string {
   const jsonString = superjson.stringify(obj);
-  return "#" + btoa(jsonString);
+  return "#" + encode(jsonString);
 }
 
 export function useHash<T>(
