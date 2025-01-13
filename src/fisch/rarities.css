@@ -1,0 +1,52 @@
+.trash {
+    color: #919191;
+}
+
+.common {
+    color: #8ebbbf;
+}
+
+.uncommon {
+    color: #a1ffa9;
+}
+
+.unusual { 
+    color: #c087c6;
+}
+
+.rare {
+    color: #776cb5;
+    font-weight: 700;
+}
+
+.legendary {
+    color: #f0b56d;
+}
+
+.mythical {
+    color: #ff3e78;
+}
+
+.exotic {
+    background: linear-gradient(90deg,#ff65ce,#ffff6e,#8fff8f,#99feff,#a8afff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 700;
+}
+
+.relic {
+    color :#78ffb7;
+}
+
+.fragment {
+    color: #ff3f05;
+}
+
+.gemstone {
+    color: #ac39ff;
+}
+
+.limited {
+    color :#36499f;
+}

@@ -5,6 +5,24 @@ import { WeatherType } from "./weather";
 
 const fishData = [
   {
+    name: "Seaweed",
+    identifier: "seaweed",
+    preferredBait: "magnet",
+    min: 0.1,
+    max: 0.6,
+    rarity: "trash",
+    price: 30,
+  },
+  {
+    name: "Destroyed Fossil",
+    identifier: "destroyedFossil",
+    rarity: "trash",
+    price: 7.778,
+    min: 1,
+    max: 9.5,
+    time: "day",
+  },
+  {
     name: "Largemouth Bass",
     identifier: "largemouthBass",
     preferredBait: "worm",
@@ -50,7 +68,7 @@ const fishData = [
       foggy: true,
       rain: true,
     },
-    seasom: {
+    season: {
       summer: true,
     },
     price: 14,
@@ -125,6 +143,15 @@ const fishData = [
     min: 0.1,
     max:1.3,
     bait: "seaweed",
+  },
+  {
+    name:"The Depths Key",
+    identifier: "depthKey",
+    rarity: "exotic",
+    min: 50,
+    price: 8,
+    max: 210,
+    time: "day"
   }
 ] as const;
 

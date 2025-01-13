@@ -48,6 +48,16 @@ const baitData = [
       preferred: 35,
       universal: 0,
     },
+  },
+  {
+    name: "Magnet",
+    identifier: "magnet",
+    resilience: 0,
+    lure: 0,
+    luck: {
+      preferred: 200,
+      universal: 0,
+    },
   }
 ] as const;
 

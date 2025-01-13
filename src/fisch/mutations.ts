@@ -1,9 +1,31 @@
+import "./mutations.css";
+
 // Define the mutations array with 'as const' to preserve literal types
 const mutationData = [
     {
         name: "Aurora",
         identifier: "aurora",
         value: 6.5,
+    },
+    {
+        name: "Aureolin",
+        identifier: "aureolin",
+        value: 5
+    },
+    {
+        name: "Aurulent",
+        identifier: "aurulent",
+        value: 5
+    },
+    {
+        name: "Heavenly",
+        identifier: "heavenly",
+        value: 5
+    },
+    {
+        name: "Subspace",
+        identifier: "subspace",
+        value: 5,
     },
     {
         name: "Mythical",

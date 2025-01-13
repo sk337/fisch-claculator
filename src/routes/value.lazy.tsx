@@ -13,7 +13,7 @@ import { getMutationByIdentifier, MutationType } from "$/mutations";
 import { fishType, getFishByIdentifier } from "$/fishes";
 import { SelectFish } from "$/selectFishes";
 import RangeInputSelect from "@/components/rangeInput";
-import { getFischValue, getFishString } from "$/utils";
+import { getFischValue, getFishJSX, getFishString } from "$/utils";
 import { useHash } from "@/hooks/useHash";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
@@ -88,6 +88,7 @@ function RouteComponent() {
                         className="w-min h-6"
                         type="checkbox"
                         onChange={(e) => setShiny(e.target.checked)}
+                        checked={shiny}
                       />
                       <Label>Shiny</Label>
                     </div>
@@ -96,6 +97,7 @@ function RouteComponent() {
                         className="h-6 w-min"
                         type="checkbox"
                         onChange={(e) => setSparkling(e.target.checked)}
+                        checked={sparkling}
                       />
                       <Label>Sparkling</Label>
                     </div>
@@ -122,6 +124,14 @@ function RouteComponent() {
                       mutationValue,
                       shiny,
                       sparkling
+                    )}
+                  <br/>
+                  Fancy Label: {fishValue && getFishJSX(
+                      fishValue,
+                      fishWeight,
+                      mutationValue,
+                      shiny,
+                      sparkling,
                     )}
                 </p>
               </CardContent>

@@ -1,3 +1,5 @@
+import "./rarities.css"
+
 const rarityData = [
     {
         name: "Trash",
