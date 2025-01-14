@@ -1,0 +1,12 @@
+# Editor Config for project
+
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+[**/*.{[mc][jt]s,[jt]sx,[tj]s}]
+indent_size = 2
+indent_style = space
