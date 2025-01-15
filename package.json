@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -22,6 +22,7 @@
     "lucide-react": "^0.469.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "source-map": "^0.7.4",
     "superjson": "^2.2.2",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"

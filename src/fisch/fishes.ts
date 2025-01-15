@@ -152,6 +152,15 @@ const fishData = [
     price: 8,
     max: 210,
     time: "day"
+  },
+  {
+    name: "Phantom Megalodon",
+    identifier: "phantomMeg",
+    rarity: "limited",
+    min: 50_000,
+    max: 140_700,
+    price: 0.299,
+    
   }
 ] as const;
 

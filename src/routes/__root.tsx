@@ -1,6 +1,6 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
-// import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 export const Route = createRootRoute({
   component: () => (
@@ -29,10 +29,13 @@ export const Route = createRootRoute({
         </div>
       </div>
       <Outlet />
-      {/* <TanStackRouterDevtools /> */}
+      <TanStackRouterDevtools />
     </>
   ),
   notFoundComponent: () => (
     <div className="text-center font-bold text-2xl">404 Not Found</div>
+  ),
+  pendingComponent: () => (
+    <div className="text-center font-bold text-2xl">Loading...</div>
   ),
 });

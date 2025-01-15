@@ -58,6 +58,16 @@ const baitData = [
       preferred: 200,
       universal: 0,
     },
+  },
+  {
+    name: "Shark Head",
+    identifier: "sharkHead",
+    resilience: 10,
+    lure: -5,
+    luck: {
+      preferred: 255,
+      universal: 30,
+    }
   }
 ] as const;
 

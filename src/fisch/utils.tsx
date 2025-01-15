@@ -1,13 +1,14 @@
 import { Fish } from "./fishes";
 import { Mutation } from "./mutations";
-import "./rarities.css"
-import * as React from 'react';
+import "./rarities.css";
+import "./mutations.css";
+import * as React from "react";
 
 function insertItemBetween<T>(arr: T[], item: T): T[] {
   return arr.reduce((acc, curr, index) => {
-      if (index > 0) acc.push(item);
-      acc.push(curr);
-      return acc;
+    if (index > 0) acc.push(item);
+    acc.push(curr);
+    return acc;
   }, [] as T[]);
 }
 
@@ -70,16 +71,15 @@ export function getFishString(
   return output.join(" ");
 }
 
-
 export function getFishJSX(
   fish: Fish,
   weight: number,
   mutation?: Mutation,
   shiny?: boolean,
   sparkling?: boolean,
-  props?: React.HTMLAttributes<HTMLSpanElement> & React.ClassAttributes<HTMLElement>
+  props?: React.HTMLAttributes<HTMLSpanElement> &
+    React.ClassAttributes<HTMLElement>
 ) {
-
   const children: React.ReactNode[] = [];
 
   if (shiny) {
@@ -87,7 +87,7 @@ export function getFishJSX(
   }
 
   if (sparkling) {
-    children.push(<span className="sparkling">Sparkling</span>)
+    children.push(<span className="sparkling">Sparkling</span>);
   }
 
   if (weight > fish.max && weight <= fish.max * 2) {
@@ -97,12 +97,12 @@ export function getFishJSX(
   }
 
   if (mutation) {
-    children.push(<span className={mutation.identifier}>{mutation.name}</span>)
+    children.push(<span className={mutation.identifier}>{mutation.name}</span>);
   }
 
   children.push(`${weight}kg`);
 
-  children.push(<span className={fish.rarity}>{fish.name}</span>)
+  children.push(<span className={fish.rarity}>{fish.name}</span>);
 
   return React.createElement("span", props, insertItemBetween(children, " "));
 }
